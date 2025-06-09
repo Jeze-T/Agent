@@ -1,6 +1,7 @@
 # Agent
 
 >全文参考https://mp.weixin.qq.com/s/TSioLS_RhrX57YEnY3mkag
+>https://juejin.cn/post/7272558903102079012
 
 ## 目录
 ### 一、什么是大模型 Agent ？
