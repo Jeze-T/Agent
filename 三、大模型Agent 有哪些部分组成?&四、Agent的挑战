@@ -67,6 +67,8 @@ Memory在Agent系统中扮演重要角色，它存储和组织从环境中获取
 2、记忆写入（Write）：当Agent从环境中获取到新信息或学习到新知识时，它需要将这些信息写入到内存中。写入操作可以是对短期记忆的更新，也可以是将重要信息存储到长期记忆中，以便将来使用。
 3、记忆反射（Reflection）：记忆反射是Agent对内存信息进行总结和抽象的过程。通过反思过去的经验和知识，Agent可以提炼出更高层次的见解和规律，从而提升其决策能力和适应性。这种过程类似于人类的反思和学习过程，是Agent实现智能的关键环节之一。
 
+>参考：https://juejin.cn/post/7272558903102079012
+我们现在通常使用向量数据库来存储、搜索外部记忆，它使用最大内积搜索(MIPS)的技术来对记忆进行相关性搜索，目前常用的MIPS 的算法有LSH、ANNOY、HNSW、FAISS、ScaNN等。
 
 ## 工具（Tools）
 LLM 是数字世界中的程序，想要与现实世界互动、获取未知的知识，或是计算某个复杂的公式等，都离不开不工具。所以我们需要为智能体配备各种工具以及赋予它使用工具的能力。
@@ -91,6 +93,7 @@ Function Calling 是通过请求 LLM 的 chat API 实现的，在支持 Function
 
 除了使用Function calling，还有MRKL、Toolformer、HuggingGPT等方法。
 
+目前的ChatGPT Plugins 和OpenAI API function calling 都是LLM使用工具的非常好的实践案例。除此之外，还有MRKL、TALM、Toolformer、HuggingGPT和API Bank等使用工具的方法。
 
 ## 行动（Action）
 行动的职责是依规划与记忆，使用工具执行具体行动。包括与外部互动或工具调用，实现输入至输出的转化。比如：智能客服回复、查询天气预报、预约会议等。
